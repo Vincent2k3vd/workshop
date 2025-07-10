@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Các bước chuẩn bị on AWS System Manager</title>
+    <link>https://vincent2k3vd.github.io/workshop/vi/2-prerequiste/</link>
+    <description>Recent content in Các bước chuẩn bị on AWS System Manager</description>
+    <generator>Hugo</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://vincent2k3vd.github.io/workshop/vi/2-prerequiste/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tạo Identities</title>
+      <link>https://vincent2k3vd.github.io/workshop/vi/2-prerequiste/2.2-createidentities/_inde/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://vincent2k3vd.github.io/workshop/vi/2-prerequiste/2.2-createidentities/_inde/</guid>
+      <description>&lt;h2 id=&#34;22-tạo-danh-tính-identities-cho-dịch-vụ-gửi-mail-amazon-ses&#34;&gt;2.2. Tạo danh tính (Identities) cho dịch vụ gửi mail (Amazon SES)&lt;/h2&gt;&#xA;&lt;p&gt;Để sử dụng dịch vụ gửi email Amazon SES một cách an toàn và hiệu quả, bạn cần tạo danh tính (identity) như domain hoặc địa chỉ email để xác minh và cấp quyền gửi mail. Việc xác thực danh tính là bắt buộc trước khi Amazon SES cho phép bạn gửi email đến người dùng cuối.&lt;/p&gt;&#xA;&lt;h3 id=&#34;các-bước-thực-hiện&#34;&gt;Các bước thực hiện:&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Truy cập Amazon SES Console:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

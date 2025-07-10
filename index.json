@@ -1,0 +1,57 @@
+[
+{
+	"uri": "https://vincent2k3vd.github.io/workshop/1-introduce/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Session Manager is a function within the AWS System Manager service, SSM provides verifiable and secure version management without opening incoming ports, without Bastion Host or SSH key management. Session Manager also makes it easy to comply with corporate policies that require controlled access to instances, strict security practices, and fully auditable logs with instance access details, while still providing end-users with one-click cross-platform access to your managed instances.\nBy using Session Manager, you get the following advantages that traditional methods do not have:\nNo need to open port 22 for SSH protocol, so it is more secure. Can be configured so that the connection does not need to go outside the internet, so it is more secure. No need to manage the server\u0026rsquo;s private key to connect to SSH. Centralized management of users using AWS IAM. Access to the server easily and simply with one click. Faster access time than traditional methods like SSH Support many different operating systems such as Linux, Windows, MacOS Log the connection sessions and commands executed while connecting to the server. With the above advantages, you can use Session Manager instead of using Bastion host technique to save us time and money when managing Bastion server.\n"
+},
+{
+	"uri": "https://vincent2k3vd.github.io/workshop/",
+	"title": "Session Management",
+	"tags": [],
+	"description": "",
+	"content": "Work with Amazon System Manager - Session Manager Overall In this lab, you\u0026rsquo;ll learn the basics and practice of Amazon System Manager - Session Manager . Perform creating public and private instance connections.\nContent Introduction Preparation Clean up resources "
+},
+{
+	"uri": "https://vincent2k3vd.github.io/workshop/2-prerequiste/2.1-createiamrole/",
+	"title": "Create IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "Create IAM Role In this step, we will proceed to create IAM Role. In this IAM Role, the policy AmazonSSMManagedInstanceCore will be assigned, this is the policy that allows the EC2 server to communicate with the Session Manager.\nGo to IAM service administration interface In the left navigation bar, click Roles. Click Create role. Click AWS service and click EC2. Click Next: Permissions. In the Search box, enter AmazonSSMManagedInstanceCore and press Enter to search for this policy. Click the policy AmazonSSMManagedInstanceCore. Click Next: Tags. Click Next: Review. Name the Role SSM-Role in Role Name Click Create Role . Next, we will make the connection to the EC2 servers we created with Session Manager.\n"
+},
+{
+	"uri": "https://vincent2k3vd.github.io/workshop/2-prerequiste/2.2-createidentities/",
+	"title": "Create Identities",
+	"tags": [],
+	"description": "",
+	"content": "2.2. Creating Identities for Email Sending (Amazon SES) To use Amazon Simple Email Service (SES) securely and effectively, you need to create and verify identities such as an email address or domain. These identities must be verified before SES allows you to send emails to recipients.\nSteps: Access the Amazon SES Console:\nLog in to the AWS Management Console. Navigate to the SES (Simple Email Service) service. Create an Identity:\nIn the left sidebar, click Verified Identities. Click Create identity. Choose the Identity Type:\nChoose between Email address (recommended for testing) or Domain (recommended for production). Enter the email address or domain you want to verify. Verify the Identity:\nFor email: You will receive a verification email. Open it and click the link to complete the verification. For domain: Add the provided DNS records (TXT, MX, or CNAME) to your domain’s DNS configuration. Wait for Verification Status:\nOnce verified, the identity status will show Verified, allowing you to use it for sending emails via SES. Notes: Make sure you are working in the correct AWS Region where SES is enabled. You must request production access to move out of the SES sandbox environment in order to send emails to real users. For domain identities, enabling DKIM (DomainKeys Identified Mail) is recommended to improve deliverability and trust. Proper identity verification ensures that your outgoing emails are not marked as spam and comply with AWS security policies.\n"
+},
+{
+	"uri": "https://vincent2k3vd.github.io/workshop/2-prerequiste/",
+	"title": "Preparation ",
+	"tags": [],
+	"description": "",
+	"content": "\rYou need to create 1 Linux instance on the public subnet and 1 Window instance on the private subnet to perform this lab.\nTo learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:\nAbout Amazon EC2 Works with Amazon VPC In order to use System Manager to manage our window instances in particular and our instances in general on AWS, we need to give permission to our instances to be able to work with System Manager. In this preparation, we will also proceed to create an IAM Role to grant permissions to instances that can work with System Manager.\nContent Create IAM Role Create Identities "
+},
+{
+	"uri": "https://vincent2k3vd.github.io/workshop/3-cleanup/",
+	"title": "Resource Cleanup",
+	"tags": [],
+	"description": "",
+	"content": "We will follow the steps below to delete the resources that we created during this lab.\nDelete IAM role Go to the IAM Management Console Click Roles. In the search box, type SSM. Click on SSM-Role. Click Delete, then type the role name SSM-Role, and click Delete to confirm. Click Users. Click on the user Portfwd. Click Delete, then type the user name Portfwd, and click Delete to confirm. Delete Identities Go to the Amazon SES Management Console.\nFrom the list of identities, find and select the one you created. Click Delete, then click Confirm to permanently remove the identity. "
+},
+{
+	"uri": "https://vincent2k3vd.github.io/workshop/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://vincent2k3vd.github.io/workshop/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
